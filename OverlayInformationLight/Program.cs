@@ -953,7 +953,7 @@ namespace OverlayInformationLight
                         ParticleEffect eff;
                         if (!BaraIndicator.TryGetValue(v, out eff))
                         {
-                            eff = new ParticleEffect("particles/hw_fx/cursed_rapier.vpcf", v);
+                            eff = new ParticleEffect("particles/items2_fx/ward_true_sight.vpcf", v);
                             eff.SetControlPointEntity(1,v);
                             BaraIndicator.Add(v,eff);
                         }
@@ -1116,10 +1116,8 @@ namespace OverlayInformationLight
             if (unit.IsAlive && unit.IsVisibleToEnemies)
             {
                 if (Effects1.TryGetValue(unit, out effect)) return;
-                effect = unit.AddParticleEffect("particles/items2_fx/smoke_of_deceit_buff.vpcf"); //particles/items_fx/diffusal_slow.vpcf
-                effect2 = unit.AddParticleEffect("particles/items2_fx/shadow_amulet_active_ground_proj.vpcf");
+                effect = unit.AddParticleEffect("particles/items2_fx/smoke_of_deceit_buff.vpcf"); 
                 Effects1.Add(unit, effect);
-                Effects2.Add(unit, effect2);
             }
             else
             {
